@@ -102,9 +102,9 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{gbt7714}
 
 % 处理ctex宏包默认字体warning问题（直接使用项目内字体文件）
-\setCJKmainfont[Path=./,AutoFakeBold]{SIMSUN.TTC}
-\setCJKsansfont[Path=./,AutoFakeBold]{SIMHE.TTF}
-\setCJKmonofont[Path=./,AutoFakeBold]{SIMFANG.TTF}
+\setCJKmainfont[Path=./fonts/,AutoFakeBold]{SIMSUN.TTC}
+\setCJKsansfont[Path=./fonts/,AutoFakeBold]{SIMHE.TTF}
+\setCJKmonofont[Path=./fonts/,AutoFakeBold]{SIMFANG.TTF}
 
 % 页面布局 %
 % -------------------------------------------------------%
@@ -134,18 +134,18 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % 重定义ctex定义好的宋体和黑体，以支持伪加粗AutoFakeBold
 % 即支持类似word里的给黑体、宋体等中文字体加粗的操作，用\bfseries
 \let\heiti\relax
-\newCJKfontfamily[hei]\heiti[Path=./,AutoFakeBold]{SIMHE.TTF}
+\newCJKfontfamily[hei]\heiti[Path=./fonts/,AutoFakeBold]{SIMHE.TTF}
 \let\songti\relax
-\newCJKfontfamily[song]\songti[Path=./,AutoFakeBold]{SIMSUN.TTC}
+\newCJKfontfamily[song]\songti[Path=./fonts/,AutoFakeBold]{SIMSUN.TTC}
 \let\kaishu\relax
-\newCJKfontfamily[kai]\kaishu[Path=./,AutoFakeBold]{SIMKAI.TTF}
+\newCJKfontfamily[kai]\kaishu[Path=./fonts/,AutoFakeBold]{SIMKAI.TTF}
 
 \let\huawenxingkai\relax
-\newCJKfontfamily[hwxk]\huawenxingkai{STXingkai.ttf}[AutoFakeBold]
+\newCJKfontfamily[hwxk]\huawenxingkai[Path=./fonts/,AutoFakeBold]{STXingkai.ttf}
 \let\huawenzhongsong\relax
-\newCJKfontfamily[hwzs]\huawenzhongsong{STZhongsong.ttf}[AutoFakeBold]
+\newCJKfontfamily[hwzs]\huawenzhongsong[Path=./fonts/,AutoFakeBold]{STZhongsong.ttf}
 \let\huawenxinwei\relax
-\newCJKfontfamily[hwxw]\huawenxinwei{STXinwei.ttf}[AutoFakeBold]
+\newCJKfontfamily[hwxw]\huawenxinwei[Path=./fonts/,AutoFakeBold]{STXinwei.ttf}
 
 
 % 每行缩进两个汉字
