@@ -147,6 +147,11 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \let\huawenxinwei\relax
 \newCJKfontfamily[hwxw]\huawenxinwei[Path=./fonts/,AutoFakeBold]{STXinwei.ttf}
 
+% 封面按 Word 模板局部加字距。xeCJK 的 LetterSpace 是相对字号的值，
+% 这里分别近似匹配三号黑体标签和二号楷体题目内容的 1.5pt 字距。
+\newcommand*{\sztu@coverlabelletterspace}{\addCJKfontfeatures{LetterSpace=94}}
+\newcommand*{\sztu@covertitleletterspace}{\addCJKfontfeatures{LetterSpace=68}}
+
 
 % 每行缩进两个汉字
 \setlength{\parindent}{2em}
@@ -227,15 +232,15 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
         \begin{minipage}{\textwidth}
             \centering
             \bfseries
-            {\zihao{3} \heiti 题目：} 
+            {\zihao{3} \heiti \sztu@coverlabelletterspace 题目：} 
             \begin{varwidth}[t]{0.85\textwidth}
-                \zihao{2} \kaishu \uline{\@titlecn} 
+                \zihao{2} \kaishu \sztu@covertitleletterspace \uline{\@titlecn} 
             \end{varwidth}
 
         \end{minipage}
         \vskip 3.5cm
         {
-            \zihao{3} \heiti
+            \zihao{3} \heiti \sztu@coverlabelletterspace
             \begin{tabular}{ll}
                 \makebox[5em][s]{姓名：}      & \parbox[t]{14em}{\bfseries \kaishu \uline{\centering \hfill \@author \hfill}} \\
                 \makebox[5em][s]{学号：}      & \parbox[t]{14em}{\bfseries \kaishu \uline{\centering \hfill \@studentid \hfill}} \\
