@@ -108,7 +108,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 % 页面布局 %
 % -------------------------------------------------------%
-\geometry{top=25.4mm,bottom=25.4mm,left=31mm,right=31mm}
+\geometry{top=25.4mm,bottom=25.4mm,left=31.7mm,right=31.7mm}
 % 给页眉留足空间（否则会有 \headheight is too small的warning）
 \setlength{\headheight}{14.5pt}
 % “磅”是衡量印刷字体大小的单位,约等于七十二分之一英寸。
